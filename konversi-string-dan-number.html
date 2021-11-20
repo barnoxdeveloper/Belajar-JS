@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Konversi String dan Number</title>
+    </head>
+    <body>
+        <script>
+            const value1 = parseInt("1");
+            const value2 = 1;
+            const sum = value1 + value2;
+            document.writeln(`<p> ${sum} </p>`);
+
+            // function parse
+            document.writeln(
+                `<p> ini function parseInt dari 1.1 :  ${parseInt("1.1")} </p>`
+            );
+            document.writeln(
+                `<p> ini function parseFloat dari 1.1 :  ${parseFloat(
+                    "1.1"
+                )} </p>`
+            );
+            document.writeln(
+                `<p> ini function Number dari 1.1 :  ${Number("1.1")} </p>`
+            );
+
+            // conversion numbrt to string
+            const a = 1;
+            const b = 1;
+            const c = a.toString() + b.toString();
+            document.writeln(
+                `<p> ini function convertion toString :  ${c} </p>`
+            );
+
+            // Nan
+            document.writeln(
+                `<p>parseInt akan mengkonversi karakter 123Andre (mentoleransi jika kesalahan di belakang angka) :  ${parseInt(
+                    "123Andre"
+                )} </p>`
+            );
+            document.writeln(
+                `<p>parseFloat akan mengkonversi karakter 1.1Andre (mentoleransi jika kesalahan di belakang angka) : ${parseFloat(
+                    "1.1Andre"
+                )} </p>`
+            );
+            document.writeln(
+                `<p>Number akan mengkonversi karakter 1.2Andre (tidak mentoleransi sama sekali, harus type number) : ${Number(
+                    "1.2Andre"
+                )} </p>`
+            );
+
+            // function isNaN
+            const test = "Andre";
+            document.writeln(
+                `<p>Function isNan(variable), akan mengecheck apakah isi variable NaN atau tidak dan hasilnya akan boolean : ${isNaN(
+                    test
+                )} </p>`
+            );
+        </script>
+    </body>
+</html>
