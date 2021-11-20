@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator Perbandingan</title>
+    </head>
+    <body>
+        <script>
+            let result = 5 == "5";
+            document.writeln(
+                "<p>" +
+                    result +
+                    " | perbandingan nilai result = 5 dengan string = 5 menggunakan operator ==(boleh semua tipe data)</p>"
+            );
+
+            let result1 = 5 === "5";
+            document.writeln(
+                "<p>" +
+                    result1 +
+                    " | perbandingan nilai result = 5 dengan string = 5 menggunakan operator ===(tidak boleh semua tipe data, harus sama tipe datanya)</p>"
+            );
+
+            let result2 = 5 > 10; //false
+            document.writeln(
+                "<p>" +
+                    result2 +
+                    ' | perbandingan nilai result = 5 > 10 menggunakan operator " > " atau lebih dari (tidak boleh semua tipe data, harus sama tipe datanya)</p>'
+            );
+
+            let result3 = 5 < 10; //true
+            document.writeln(
+                "<p>" +
+                    result3 +
+                    ' | perbandingan nilai result = 5 < 10 menggunakan operator " < " atau kurang dari (tidak boleh semua tipe data, harus sama tipe datanya)</p>'
+            );
+
+            let result4 = 5 >= 10; //false
+            document.writeln(
+                "<p>" +
+                    result4 +
+                    ' | perbandingan nilai result = 5 >= 10 menggunakan operator " >= " atau lebih dari atau sama dengan (tidak boleh semua tipe data, harus sama tipe datanya)</p>'
+            );
+
+            let result5 = 5 <= 10; //true
+            document.writeln(
+                "<p>" +
+                    result5 +
+                    ' | perbandingan nilai result = 5 <= 10 menggunakan operator " <= " atau kurang dari atau sama dengan (tidak boleh semua tipe data, harus sama tipe datanya)</p>'
+            );
+
+            let result6 = 5 != "10"; //true
+            document.writeln(
+                "<p>" +
+                    result6 +
+                    ' | perbandingan nilai result = 5 != 10 menggunakan operator " != " atau tidak sama dengan/complement (boleh semua tipe data)</p>'
+            );
+
+            let result7 = 5 !== 10; //true
+            document.writeln(
+                "<p>" +
+                    result7 +
+                    ' | perbandingan nilai result = 5 !== dengan string = 10 menggunakan operator " !== " atau tidak sama dengan/complement (boleh semua tipe data)</p>'
+            );
+        </script>
+    </body>
+</html>
