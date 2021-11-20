@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>String Template</title>
+    </head>
+    <body>
+        <script>
+            const firstName = "Barnox";
+            const lastName = "Developer";
+            const template = `Name : ${firstName} ${lastName}`;
+            console.log(template);
+
+            // subtitutions string
+            const nilai = 80;
+            const template1 = `Name : ${template}, Lulus : ${nilai > 70}`;
+            console.log(template1);
+
+            // multi line string
+
+            const multiLine = `Nama : Andre,
+            Umur : 11`;
+            document.writeln("<pre>");
+            document.writeln(multiLine);
+            document.writeln("</pre>");
+        </script>
+    </body>
+</html>
