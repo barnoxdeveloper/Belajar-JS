@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tipe Data Array</title>
+    </head>
+    <body>
+        <script>
+            const names = [];
+            names.push("satu");
+            names.push("dua", "tiga");
+            names.push(10);
+            console.table(names);
+
+            delete names[1];
+            console.table(names);
+
+            names[1] = "pengganti dua";
+            names.push([1, 2, 3]);
+            console.table(names);
+            console.table(names.length);
+        </script>
+    </body>
+</html>
