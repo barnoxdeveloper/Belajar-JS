@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator Typeof</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Barnox",
+                lastName: "Developer",
+            };
+            if ("firstName" in person) {
+                document.writeln(`<p> ${person.firstName} </p>`);
+            } else {
+                document.writeln(`<p> Hello </p>`);
+            }
+
+            // operator in hanya akan mengecheck apakah properties/index ada atau tidak, tidak check valuenya
+            const student = {
+                firstName: "Barnox",
+                middleName: undefined,
+                lastName: "Developer",
+            };
+            if ("middleName" in student) {
+                document.writeln(`<p> ${student.middleName} </p>`);
+            } else {
+                document.writeln(`<p> Hello </p>`);
+            }
+
+            const names = [null, "Andre", null];
+            const result = 0 in names;
+            document.writeln(`<p> ${result} </p>`);
+        </script>
+    </body>
+</html>
