@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator Logika Non Boolean</title>
+    </head>
+    <body>
+        <script>
+            // operator logika non boolean
+            // - membaca dari kiri ke kanan
+            // - operator ini mengambil nilai pertama yang truthy
+            // - jika tidak ada satupun yang bernilai truthy, maka yang terakhir yang akan di ambil
+            console.info("Hello" || "");
+            console.info("Hello" || []);
+            console.info("0" || "NOL");
+            console.info(0 || "NOL");
+            console.info(0 || -0);
+            console.info(undefined || "A");
+            console.info(null || undefined);
+            console.info(undefined || null);
+
+            // contoh penggunaan
+            const person = {
+                firstName: null,
+                lastName: "Developer",
+            };
+
+            console.info(person.firstName || person.lastName);
+        </script>
+    </body>
+</html>
