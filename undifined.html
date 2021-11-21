@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Undifined</title>
+    </head>
+    <body>
+        <script>
+            let name;
+            if (name === undefined) {
+                console.info("UNDIFINED");
+            } else {
+                console.info("DIFINED");
+            }
+
+            // undifined on array
+            const names = ["Barnox", "Developer"];
+            if (names[2] === undefined) {
+                console.info("UNDIFINED");
+            } else {
+                console.info("DIFINED");
+            }
+
+            // undifined on object/property
+            const person = {
+                name: "Andre",
+            };
+            if (person.name === undefined) {
+                console.info("UNDIFINED");
+            } else {
+                console.info(`DIFINED ${person.name}`);
+            }
+        </script>
+    </body>
+</html>
