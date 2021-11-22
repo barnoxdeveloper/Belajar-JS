@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Rest parameter</title>
+    </head>
+    <body>
+        <script>
+            // fungsi rest parameter adalah untuk mengkonversi data yang banyak menjadi array
+            // rest parameter harus paling belakang, syntax : ...parameter
+            function sum(name, ...data) {
+                let total = 0;
+                for (const item of data) {
+                    total += item;
+                }
+                document.writeln(`<p> ${name} is ${total}  </p>`);
+            }
+            sum("Andre", 11, 22, 33);
+
+            // dalam rest parameter ada yang namanya spread syntax
+            // spread syntax : memberitahu function bahwa data yang dikirimkan adalah array, syntax : ...valueParameter
+            const values = [10, 10, 20, 30];
+            sum("Barnox", ...values);
+
+            // sebelum ada rest parameter, dalam JS ada fitur arguments, versi lama
+            function oldSum() {
+                let total1 = 0;
+                for (const argument of arguments) {
+                    total1 += argument;
+                }
+                document.writeln(`<p> Total is : ${total1}  </p>`);
+            }
+            oldSum(11, 44, 77);
+        </script>
+    </body>
+</html>
