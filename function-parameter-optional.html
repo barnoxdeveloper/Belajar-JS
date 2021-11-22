@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Optional Parameter</title>
+    </head>
+    <body>
+        <script>
+            // parameter diJS itu optional , jika tidak di isi makan valuenya = undifined
+            function hello(param1, param2, param3) {
+                console.info(param1);
+                console.info(param2);
+                console.info(param3);
+            }
+
+            hello();
+            hello("Andre");
+            hello("Andre", "123", "abc");
+        </script>
+    </body>
+</html>
