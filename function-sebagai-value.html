@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Sebagai Value</title>
+    </head>
+    <body>
+        <script>
+            // function sebagai value adalah suatu function bisa disimpan di dalam variabel
+            function sayHello(name) {
+                document.writeln(`<p> Hello ${name} </p>`);
+            }
+
+            // pemanggilan function biasa
+            sayHello("Andre");
+
+            // pemanggilan function sebagai value(masukan ke dalam parameter tanpa kurungtutup dan buka)
+            let say = sayHello;
+            say("Barnox");
+
+            // function sebagai value untuk parameter lain
+            function giveMeName(callback) {
+                callback("Developer");
+                // document.writeln(`<p> Hello ${callback} </p>`);
+            }
+            // call function name
+            giveMeName(sayHello);
+            giveMeName(say);
+        </script>
+    </body>
+</html>
