@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Generator</title>
+    </head>
+    <body>
+        <script>
+            // function generator mirim dengan array, namun datanya tidak array
+            // function generator diawali dengan bintang setelah kata kunci function
+            // generator sifatnya lazy, sebelum data ditarik yield selanjutnya tidak dieksekusi
+            function* creatednames() {
+                yield "Barnox";
+                yield "123";
+                yield "Developer";
+                yield 123;
+            }
+
+            const names = creatednames();
+            for (const name of names) {
+                console.info(name);
+            }
+
+            // sifatnya leazy
+            function* buatGanjil(value) {
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 === 1) {
+                        console.info(`Yield ${i}`);
+                        yield i;
+                    }
+                }
+            }
+
+            // sifatnya eager/eksekusi keseluruhan dulu, kemudian perintah selanjutnya
+            function buatGanjilArray(value) {
+                const result = [];
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 === 1) {
+                        console.info(`Yield ${i}`);
+                        result.push(i);
+                    }
+                }
+
+                return result;
+            }
+
+            const numbers = buatGanjil(50);
+            // for (const number of numbers) {
+            //     console.info(number);
+            // }
+
+            // dalam generator ada function/kata kunci next() : untuk me iterasi data selanjutnya
+            // akan menghemat data dan proses komputasi karena hanya data dibutuhkan saja yang akan diambil
+            console.info(numbers.next().value);
+            console.info(numbers.next().value);
+        </script>
+    </body>
+</html>
