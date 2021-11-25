@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Arrow</title>
+    </head>
+    <body>
+        <script>
+            // Arrow function adalah alternatif function yang lebih sederhana
+            // ada 2 cara penulisannya : dengan blok/kurung kurawal dan tidak dengan blok
+            // penulisan dengan blok/kurung kurawal
+            // const sayHello = (name) => {
+            //     const say = `Hello ${name}`;
+            //     console.info(say);
+            // };
+            // sayHello("Andre");
+
+            // penulisan tanpa blok
+            const sayHello = (name) => console.info(`Hello ${name}`);
+            // penyerderhanaan tanpa kurung buka dan tutup/(), namun hanyan berlaku 1 parameter
+            // const sayHello = name => console.info(`Hello ${name}`);
+            sayHello("Andre");
+
+            // arrow functio dengan return data dengan blok
+            // const sum = (first, second) => {
+            //     return first + second;
+            // };
+
+            // arrow functio dengan return data tanpa blok
+            const sum = (first, second) => first + second;
+            console.info(sum(11, 23));
+
+            // arrow function dapat dimasukan dalam parameter function lain
+            function giveMeName(callback) {
+                callback("Barnox");
+            }
+
+            // ini anonymous function
+            // giveMeName(function (name) {
+            //     console.info(`Hello ${name}`);
+            // });
+
+            // ini arrow function
+            giveMeName((name) => console.info(`Hello ${name}`));
+        </script>
+    </body>
+</html>
