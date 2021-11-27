@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            // Destructuring Array
+            {
+                let names = ["Andre", "123", "Elm", "Barnox", "Developer"];
+                let [firstName, middleName, lastName, ...others] = names;
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+                console.info(others);
+            }
+
+            // Destructuring Object
+            {
+                const person = {
+                    firstName: "Andre",
+                    lastName: "321",
+                    address: {
+                        street: "Cikarang",
+                        city: "Bekasi",
+                        country: "Indonesia",
+                    },
+                    hobby: "game",
+                    channel: "Youtube",
+                };
+
+                let {
+                    firstName,
+                    lastName,
+                    address: { street, city, country }, // Destructuring Object Nested
+                    ...others
+                } = person;
+                console.info(firstName);
+                console.info(lastName);
+                console.info(street);
+                console.info(city);
+                console.info(country);
+                console.info(others);
+            }
+        </script>
+    </body>
+</html>
