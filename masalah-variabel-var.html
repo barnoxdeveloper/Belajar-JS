@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Masalah Variabel Var</title>
+    </head>
+    <body>
+        <script>
+            // kata kunci var dapat merubah value variabel yang sudah dideklarasikan di scope yang lain
+            // jika menggunakan let maka variabel i global scope tetap 20
+            let i = 20; // tetap 20
+
+            for (let i = 0; i < 10; i++) {
+                console.info(`Local ${i}`); // 0 sampai 9
+            }
+            console.info(`Global ${i}`); // 20
+
+            // jika menggunakan let maka variabel j global scope akan berubah dan ikut di looping
+            let j = 10; // berubah
+
+            for (let j = 0; j < 10; j++) {
+                console.info(`Local ${j}`); // 0 sampai 9
+            }
+            console.info(`Global ${j}`); // ikut di looping
+        </script>
+    </body>
+</html>
